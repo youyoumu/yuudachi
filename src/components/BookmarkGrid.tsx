@@ -12,7 +12,7 @@ export default function BookmarkGrid(props: { bookmarks: Bookmark[] }) {
               target="_blank"
               rel="noopener noreferrer"
               title={bookmark.url}
-              class="group flex flex-col items-center gap-3 rounded-2xl p-4 transition-colors hover:bg-surface-container-high"
+              class="group flex flex-col items-center gap-3 rounded-lg p-4 transition-colors hover:bg-surface-container"
             >
               <span
                 class="flex h-12 w-12 items-center justify-center rounded-full bg-primary-container text-lg font-semibold text-on-primary-container"

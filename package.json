@@ -8,7 +8,12 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "dependencies": {
     "@solidjs/web": "^2.0.0-rc.0",
@@ -17,8 +22,10 @@
   "devDependencies": {
     "@solidjs/vite-plugin": "^3.0.0-next.28",
     "@tailwindcss/vite": "^4.3.3",
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.78.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "^5.9.2",
+    "typescript": "^7.0.2",
     "vite": "^8.1.5"
   }
 }

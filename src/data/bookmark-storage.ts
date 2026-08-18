@@ -40,9 +40,7 @@ export function saveBookmarks(bookmarks: Bookmark[]): void {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
 }
 
-export type ParseResult =
-  | { ok: true; value: Bookmark[] }
-  | { ok: false; error: string };
+export type ParseResult = { ok: true; value: Bookmark[] } | { ok: false; error: string };
 
 export function parseBookmarks(text: string): ParseResult {
   let data: unknown;

@@ -1,10 +1,7 @@
 import { Show, createMemo, createSignal } from "solid-js";
-import {
-  DEFAULT_BOOKMARKS,
-  parseBookmarks,
-  saveBookmarks,
-} from "../data/bookmark-storage";
+import { DEFAULT_BOOKMARKS, parseBookmarks, saveBookmarks } from "../data/bookmark-storage";
 import type { Bookmark } from "../data/types";
+import { Check, Pencil, RotateCcw, X } from "./Icons";
 
 interface BookmarkEditorProps {
   bookmarks: Bookmark[];
@@ -62,18 +59,15 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
         <button
           type="button"
           onClick={openEditor}
-          class="fixed top-4 right-4 z-20 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
+          class="fixed top-4 right-4 z-20 flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
         >
+          <Pencil width={16} height={16} />
           Edit bookmarks
         </button>
       </Show>
 
       <Show when={editing()}>
-        <div
-          class="fixed inset-0 z-30 bg-black/50"
-          role="presentation"
-          onClick={handleClose}
-        />
+        <div class="fixed inset-0 z-30 bg-black/50" role="presentation" onClick={handleClose} />
         <aside
           class="fixed inset-y-0 right-0 z-40 flex w-full max-w-md flex-col border-l border-outline-variant bg-surface-container shadow-2xl"
           role="dialog"
@@ -81,16 +75,14 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
           aria-label="Edit bookmarks"
         >
           <header class="flex items-center justify-between border-b border-outline-variant px-4 py-3">
-            <h2 class="text-base font-semibold text-on-surface">
-              Edit bookmarks (localStorage)
-            </h2>
+            <h2 class="text-base font-semibold text-on-surface">Edit bookmarks (localStorage)</h2>
             <button
               type="button"
               onClick={handleClose}
-              class="text-xl leading-none text-on-surface-variant transition-colors hover:text-on-surface"
+              class="text-on-surface-variant transition-colors hover:text-on-surface"
               aria-label="Close editor"
             >
-              ×
+              <X width={20} height={20} />
             </button>
           </header>
 
@@ -105,10 +97,7 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
             />
 
             <div class="rounded-lg bg-surface-container-low px-3 py-2 text-xs">
-              <Show
-                when={status().valid}
-                fallback={<p class="text-error">{status().text}</p>}
-              >
+              <Show when={status().valid} fallback={<p class="text-error">{status().text}</p>}>
                 <p class="text-on-surface-variant">{status().text}</p>
               </Show>
             </div>
@@ -118,8 +107,9 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
             <button
               type="button"
               onClick={handleReset}
-              class="rounded-lg px-3 py-2 text-sm font-medium text-on-surface-variant transition-colors hover:bg-surface-container-high hover:text-error"
+              class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-on-surface-variant transition-colors hover:bg-surface-container-high hover:text-error"
             >
+              <RotateCcw width={16} height={16} />
               Reset to defaults
             </button>
             <div class="flex gap-2">
@@ -133,8 +123,9 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
               <button
                 type="button"
                 onClick={handleSave}
-                class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
+                class="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
               >
+                <Check width={16} height={16} />
                 Save
               </button>
             </div>

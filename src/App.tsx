@@ -2,8 +2,8 @@ import { createSignal, onSettled } from "solid-js";
 import BookmarkEditor from "./components/BookmarkEditor";
 import BookmarkGrid from "./components/BookmarkGrid";
 import Hero from "./components/Hero";
-import { DEFAULT_BOOKMARKS, loadBookmarks } from "./data/bookmark-storage";
-import type { Bookmark } from "./data/types";
+import { DEFAULT_BOOKMARKS, loadBookmarks } from "./lib/bookmark-storage";
+import type { Bookmark } from "./lib/types";
 import "./styles/index.css";
 
 export default function App() {

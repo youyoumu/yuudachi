@@ -1,6 +1,6 @@
 import { Show, createSignal } from "solid-js";
 import { Globe } from "./Icons";
-import type { Bookmark } from "../data/types";
+import type { Bookmark } from "../lib/types";
 
 function hostname(url: string): string {
   try {

@@ -1,6 +1,6 @@
 import { Show, createMemo, createSignal } from "solid-js";
-import { DEFAULT_BOOKMARKS, parseBookmarks, saveBookmarks } from "../data/bookmark-storage";
-import type { Bookmark } from "../data/types";
+import { DEFAULT_BOOKMARKS, parseBookmarks, saveBookmarks } from "../lib/bookmark-storage";
+import type { Bookmark } from "../lib/types";
 import { Check, Pencil, RotateCcw, X } from "./Icons";
 
 interface BookmarkEditorProps {

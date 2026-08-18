@@ -1,4 +1,4 @@
-import { applyThemeFromImage, BING_WALLPAPER_URL } from "../data/wallpaper";
+import { applyThemeFromImage, BING_WALLPAPER_URL } from "../lib/wallpaper";
 
 export default function Hero() {
   return (

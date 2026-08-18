@@ -1,6 +1,6 @@
 import { For } from "solid-js";
 import BookmarkCard from "./BookmarkCard";
-import type { Bookmark } from "../data/types";
+import type { Bookmark } from "../lib/types";
 
 export default function BookmarkGrid(props: { bookmarks: Bookmark[] }) {
   return (

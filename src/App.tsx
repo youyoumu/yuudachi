@@ -3,7 +3,7 @@ import BookmarkEditor from "./components/BookmarkEditor";
 import BookmarkGrid from "./components/BookmarkGrid";
 import { DEFAULT_BOOKMARKS, loadBookmarks } from "./data/bookmark-storage";
 import type { Bookmark } from "./data/types";
-import "./index.css";
+import "./styles/index.css";
 
 export default function App() {
   const [bookmarks, setBookmarks] = createSignal<Bookmark[]>(DEFAULT_BOOKMARKS);

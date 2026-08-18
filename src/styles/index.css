@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "./theme.css";
+@import "./light.css";
+@import "./dark.css";
+@import "./light-mc.css";
+@import "./dark-mc.css";
+@import "./light-hc.css";
+@import "./dark-hc.css";

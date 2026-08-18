@@ -1,5 +1,5 @@
-import type { ParentProps } from 'solid-js';
-import { HydrationScript } from '@solidjs/web';
+import type { ParentProps } from "solid-js";
+import { HydrationScript } from "@solidjs/web";
 
 // The document shell — the new index.html: picked up by the src/Document.*
 // convention, it wraps the app in the plugin's generated entries and must
@@ -15,10 +15,10 @@ export default function Document(props: ParentProps) {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <title>Solid App</title>
+        <title>Yuudachi</title>
         <HydrationScript />
       </head>
-      <body>{props.children}</body>
+      <body class="bg-neutral-950">{props.children}</body>
     </html>
   );
 }

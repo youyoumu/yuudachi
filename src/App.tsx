@@ -1,30 +1,20 @@
-import { createSignal } from 'solid-js';
-import logo from './logo.svg';
-import './App.css';
+import { Loading, createMemo } from "solid-js";
+import { getBookmarks } from "./data/mock-bookmarks";
+import BookmarkGrid from "./components/BookmarkGrid";
+import "./index.css";
 
-// The app root: a plain content component — the document shell lives in
-// src/Document.tsx. This file is the whole demo; replace its contents to
-// start your app.
 export default function App() {
-  const [count, setCount] = createSignal(0);
+  const bookmarks = createMemo(() => getBookmarks());
 
   return (
-    <header class="header">
-      <img src={logo} class="logo" alt="Solid logo" />
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <button class="increment" onClick={() => setCount(count() + 1)}>
-        Clicks: {count()}
-      </button>
-      <a
-        class="link"
-        href="https://v2.solidjs.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn Solid
-      </a>
-    </header>
+    <div class="min-h-screen bg-neutral-950 text-neutral-100">
+      <header class="pb-10 pt-16 text-center">
+        <h1 class="text-4xl font-semibold tracking-tight">Yuudachi</h1>
+        <p class="mt-2 text-neutral-500">Your bookmarks</p>
+      </header>
+      <Loading fallback={<p class="text-center text-neutral-500">Loading…</p>}>
+        <BookmarkGrid bookmarks={bookmarks()} />
+      </Loading>
+    </div>
   );
 }

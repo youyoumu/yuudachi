@@ -1,0 +1,16 @@
+import { applyThemeFromImage, BING_WALLPAPER_URL } from "../data/wallpaper";
+
+export default function Hero() {
+  return (
+    <div class="relative h-[35vh] w-full overflow-hidden md:h-[50vh]">
+      <img
+        src={BING_WALLPAPER_URL}
+        crossorigin="anonymous"
+        onLoad={(event) => applyThemeFromImage(event.currentTarget)}
+        class="h-full w-full object-cover"
+        alt=""
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--md-sys-color-surface)]" />
+    </div>
+  );
+}

@@ -16,6 +16,7 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
+    "@material/material-color-utilities": "^0.4.0",
     "@solidjs/web": "^2.0.0-rc.0",
     "solid-js": "^2.0.0-rc.0"
   },

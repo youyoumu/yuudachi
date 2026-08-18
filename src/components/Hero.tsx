@@ -2,7 +2,7 @@ import { applyThemeFromImage, BING_WALLPAPER_URL } from "../lib/wallpaper";
 
 export default function Hero() {
   return (
-    <div class="relative h-[35vh] w-full overflow-hidden md:h-[50vh]">
+    <div class="relative h-[30vh] w-full overflow-hidden">
       <img
         src={BING_WALLPAPER_URL}
         crossorigin="anonymous"

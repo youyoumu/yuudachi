@@ -59,7 +59,7 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
         <button
           type="button"
           onClick={openEditor}
-          class="fixed top-4 right-4 z-20 flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
+          class="fixed right-4 bottom-4 z-20 flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-primary transition-opacity hover:opacity-90"
         >
           <Pencil width={16} height={16} />
           Edit bookmarks
@@ -69,12 +69,12 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
       <Show when={editing()}>
         <div class="fixed inset-0 z-30 bg-black/50" role="presentation" onClick={handleClose} />
         <aside
-          class="fixed inset-y-0 right-0 z-40 flex w-full max-w-md flex-col border-l border-outline-variant bg-surface-container shadow-2xl"
+          class="fixed inset-y-0 right-0 z-40 flex w-full max-w-md flex-col bg-surface-container shadow-2xl"
           role="dialog"
           aria-modal="true"
           aria-label="Edit bookmarks"
         >
-          <header class="flex items-center justify-between border-b border-outline-variant px-4 py-3">
+          <header class="flex items-center justify-between bg-surface-container-high px-4 py-3">
             <h2 class="text-base font-semibold text-on-surface">Edit bookmarks (localStorage)</h2>
             <button
               type="button"
@@ -92,7 +92,7 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
               onInput={(event) => setDraft(event.currentTarget.value)}
               onKeyDown={handleKeyDown}
               spellcheck={false}
-              class="h-64 w-full flex-1 resize-none rounded-lg border border-outline-variant bg-surface-container-lowest p-3 font-mono text-xs text-on-surface outline-none placeholder:text-on-surface-variant focus:border-primary"
+              class="h-64 w-full flex-1 resize-none rounded-lg bg-surface-container-lowest p-3 font-mono text-xs text-on-surface outline-none placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary"
               placeholder='[{"id": "1", "title": "GitHub", "url": "https://github.com"}]'
             />
 
@@ -103,7 +103,7 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
             </div>
           </div>
 
-          <footer class="flex items-center justify-between gap-2 border-t border-outline-variant px-4 py-3">
+          <footer class="flex items-center justify-between gap-2 bg-surface-container-high px-4 py-3">
             <button
               type="button"
               onClick={handleReset}
@@ -116,7 +116,7 @@ export default function BookmarkEditor(props: BookmarkEditorProps) {
               <button
                 type="button"
                 onClick={handleClose}
-                class="rounded-lg bg-surface-container-high px-4 py-2 text-sm font-medium text-on-surface transition-colors hover:bg-surface-container-highest"
+                class="rounded-lg bg-surface-container-highest px-4 py-2 text-sm font-medium text-on-surface transition-opacity hover:opacity-90"
               >
                 Close
               </button>

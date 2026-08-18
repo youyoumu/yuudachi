@@ -12,15 +12,15 @@ export default function BookmarkGrid(props: { bookmarks: Bookmark[] }) {
               target="_blank"
               rel="noopener noreferrer"
               title={bookmark.url}
-              class="group flex flex-col items-center gap-3 rounded-2xl p-4 transition-colors hover:bg-white/10"
+              class="group flex flex-col items-center gap-3 rounded-2xl p-4 transition-colors hover:bg-surface-container-high"
             >
               <span
-                class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 text-lg font-semibold text-white"
+                class="flex h-12 w-12 items-center justify-center rounded-full bg-primary-container text-lg font-semibold text-on-primary-container"
                 aria-hidden="true"
               >
                 {bookmark.title.charAt(0).toUpperCase()}
               </span>
-              <span class="max-w-full truncate text-center text-sm text-neutral-400 group-hover:text-neutral-100">
+              <span class="max-w-full truncate text-center text-sm text-on-surface-variant group-hover:text-on-surface">
                 {bookmark.title}
               </span>
             </a>

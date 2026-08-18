@@ -18,7 +18,7 @@ export default function Document(props: ParentProps) {
         <title>Yuudachi</title>
         <HydrationScript />
       </head>
-      <body class="bg-neutral-950">{props.children}</body>
+      <body class="bg-surface-container-lowest">{props.children}</body>
     </html>
   );
 }
